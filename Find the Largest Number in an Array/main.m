@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FindLargestArrayNumber.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+  
+        //Input your random array here
+        NSArray *randomArray = @[@3, @7, @15, @6, @8];
+        
+        //Obtain largest number in array
+        FindLargestArrayNumber *number = [[FindLargestArrayNumber alloc] init];
+        NSNumber *LargestNumber = [number largestArrayNumber:randomArray];
+        
+        //Print largest number
+        NSLog(@"Largest number in array: %@", LargestNumber);
+        
     }
     return 0;
 }
